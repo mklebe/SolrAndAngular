@@ -1,0 +1,10 @@
+<div class="root">
+  <div class="inputarea">
+    <h1>{{ location }}</h1>
+    <input [(ngModel)]="location" type="text">
+    <button (click)="addLocation()">Add</button>
+  </div>
+  <ul class="locationList">
+    <li *ngFor="let locationItem of allLocations">{{locationItem}}</li>
+  </ul>
+</div>

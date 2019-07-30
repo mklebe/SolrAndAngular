@@ -1,0 +1,10 @@
+<div class="wizardList">
+  <h1>How important is to you {{ currentStep }}</h1>
+  <app-comfort *ngIf="currentStep === 'comfort'" (picked)="preferencePicked($event)" ></app-comfort>
+  <app-activities *ngIf="currentStep === 'activities'" (picked)="preferencePicked($event)" ></app-activities>
+  <ul>
+    <li *ngFor="let p of selection">
+      {{p.value}}
+    </li>
+  </ul>
+</div>
